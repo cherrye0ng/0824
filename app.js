@@ -207,13 +207,11 @@ const textShadowFn = function(event) {
 const textSizeFn = function(event) {
     renderTxt.forEach((e) => {
         if (event.target.classList.contains('selected')) {
-            prevTitle.style.fontSize = '46px';
-            prevSubtitle.style.fontSize = '22px';
-            prevCategory.style.fontSize = '22px';
+            prevTitle.style.fontSize = '40px';
+            prevSubtitle.style.fontSize = '18px';
         } else {
             prevTitle.style.fontSize = '54px';
             prevSubtitle.style.fontSize = '24px';
-            prevCategory.style.fontSize = '24px';
         }
     });
 };
@@ -232,13 +230,12 @@ textSizeBtn.addEventListener('click', textSizeFn);
 
 const init = function() {
     domBody.style.background =
-        'url(https://images.unsplash.com/photo-1620121478247-ec786b9be2fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1489&q=80) center center / cover no-repeat';
+        'url(https://i.pinimg.com/564x/a4/96/9f/a4969fbbf298402c30b60b144556eff0.jpg) center center / cover no-repeat';
     preview.style.background =
-        'url(https://images.unsplash.com/photo-1620121478247-ec786b9be2fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1489&q=80) center center / cover no-repeat';
-    domBody.style.backgroundColor = preview.style.backgroundColor = '#78aaf9';
-    prevTitle.textContent = '제목을 입력하세요';
-    prevSubtitle.textContent = '부제목을 입력하세요';
-    prevCategory.textContent = '분류를 입력하세요';
+        'url(https://i.pinimg.com/564x/a4/96/9f/a4969fbbf298402c30b60b144556eff0.jpg) center center / cover no-repeat';
+    domBody.style.backgroundColor = preview.style.backgroundColor = '#F0D6DF';
+    prevTitle.textContent = '제목 입력하기';
+    prevSubtitle.textContent = '부제목 입력하기';
 
     allBtns.forEach((e) => {
         e.classList.remove('selected');
@@ -250,13 +247,12 @@ const init = function() {
 
     renderTxt.forEach((e) => {
         e.style.textShadow = '';
-        e.style.color = '#ffffff';
+        e.style.color = '#000';
     });
 
-    prevSubtitle.style.borderTop = '1px solid #ffffff';
+    prevSubtitle.style.borderTop = '1px solid #000';
     prevTitle.style.fontSize = '54px';
     prevSubtitle.style.fontSize = '24px';
-    prevCategory.style.fontSize = '24px';
 
     componentsBtns[0].classList.add('selected');
     inputFields[0].focus();
@@ -269,7 +265,7 @@ initBtn.addEventListener('click', init);
 
 init();
 
-const msg = '%cWonkook Lee ⓒ oneook';
+const msg = 'Cherry';
 const css =
     "font-size: 2em; color: #FEDC45; background-color: #000;font-family: 'Noto Sans KR';";
 console.log(msg, css);
